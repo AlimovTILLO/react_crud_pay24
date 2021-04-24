@@ -11,7 +11,7 @@ export function App() {
       <div style={{ paddingTop: '2.9em' }}>
         <Topbar />
         <Switch>
-          <PrivateRoute exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <PrivateRoute path="/admin" component={Passports} />
           <Route component={NotFound} />

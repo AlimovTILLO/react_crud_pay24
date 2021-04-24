@@ -13,7 +13,7 @@ export function authentication(state = initialState, action) {
       return {
         loggedIn: true,
         token: action.user.token,
-        data: action.user
+        data: action.user.user
       };
     case authenticationConstants.LOGIN_FAILURE:
       return {};

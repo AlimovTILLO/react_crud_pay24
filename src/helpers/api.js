@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { useHistory } from "react-router-dom";
-
+import { history } from '../helpers';
 let ORIGING = "http://127.0.0.1:7000"
 
 
@@ -54,7 +53,6 @@ function handleResponse(response) {
 }
 
 function handleError(error) {
-let history = useHistory();
   if (error.response.status === 401) {
     history.push('/login');
     return error.response.data

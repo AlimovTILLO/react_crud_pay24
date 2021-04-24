@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import { history } from '../helpers';
 import logo from '../logo.svg';
-import { Home, Login, Users } from '../pages';
+import { Home, Login, Passports } from '../pages';
 import { PrivateRoute, NotFound, Topbar } from '../components';
 
 export function App() {
@@ -12,7 +13,7 @@ export function App() {
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
           <Route path="/login" component={Login} />
-          <PrivateRoute path="/users" component={Users} />
+          <PrivateRoute path="/admin" component={Passports} />
           <Route component={NotFound} />
         </Switch>
       </div>

@@ -1,6 +1,6 @@
 import { API, getUserToken } from '../helpers';
 
-export const passportService = {
+export const userService = {
   login,
   logout,
   getCurrentUser,

@@ -37,9 +37,9 @@ function getAll(data) {
             );
     };
 
-    function request() { return { type: userConstants.GETALL_REQUEST } }
-    function success(passports) { return { type: userConstants.GETALL_SUCCESS, passports } }
-    function failure(error) { return { type: userConstants.GETALL_FAILURE, error } }
+    function request() { return { type: passportConstants.GETALL_REQUEST } }
+    function success(passports) { return { type: passportConstants.GETALL_SUCCESS, passports } }
+    function failure(error) { return { type: passportConstants.GETALL_FAILURE, error } }
 }
 
 function publicCreate(passport) {

@@ -1,7 +1,7 @@
 import { passportConstants } from '../constants';
 import { passportService } from '../services';
 
-export const passportActions = {
+export const passportsActions = {
     get,
     getAll,
     create,

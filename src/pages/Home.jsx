@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Input, Container, Button } from 'semantic-ui-react'
 import { useDispatch } from 'react-redux';
 
-import { passportActions } from '../actions';
+import { passportsActions } from '../actions';
 
 
 export function Home() {
@@ -27,7 +27,7 @@ export function Home() {
 
         setSubmitted(true);
         if (inputs) {
-            dispatch(passportActions.create(inputs));
+            dispatch(passportsActions.create(inputs));
         }
     }
 

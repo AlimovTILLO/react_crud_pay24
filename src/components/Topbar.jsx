@@ -24,7 +24,7 @@ export function Topbar() {
             </Menu.Menu>
             <Menu.Menu position='right'>
                 {profile.data ? <Menu.Item as={Link} to='/admin'>Админ панель</Menu.Item> : <Menu.Item as={Link} to='/login'>Войти</Menu.Item>}
-                {profile.data && <Dropdown item simple text={`${profile_name} ${profile_surname}`} >
+                {profile.data && <Dropdown item simple text={`Аккаунт: ${profile_name} ${profile_surname}`} >
                     <Dropdown.Menu>
                         <Dropdown.Item as={Link} to='/login'>Выйти</Dropdown.Item>
                     </Dropdown.Menu>

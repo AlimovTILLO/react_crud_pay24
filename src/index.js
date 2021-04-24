@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
+import 'semantic-ui-css/semantic.min.css'
+
+
 import reportWebVitals from './reportWebVitals';
+import { store } from './helpers';
+import './index.css';
+import { App } from './pages';
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

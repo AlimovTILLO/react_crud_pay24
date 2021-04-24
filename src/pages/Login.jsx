@@ -40,20 +40,20 @@ export function Login() {
     return (
         <Container className='loginPage'>
             {loggingIn && <Dimmer active> <Loader /> </Dimmer>}
-            <h2 style={{ textAlign: 'center' }}>LOGIN</h2>
+            <h2 style={{ textAlign: 'center' }}>ВОЙТИ</h2>
             <form name="form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="username">Username: </label> <br />
+                    <label htmlFor="username">Имя пользователья: </label> <br />
                     <input id="username" type="text" name="username" value={username} onChange={handleChange} className={'form-control' + (submitted && !username ? ' is-invalid' : '')} />
                     {submitted && !username &&
-                        <div className="invalid-feedback">Enter username*</div>
+                        <div className="invalid-feedback">Введите имя пользователя*</div>
                     }
                 </div> <br />
                 <div className="form-group">
-                    <label htmlFor="password">Password: </label> <br />
+                    <label htmlFor="password">Пароль: </label> <br />
                     <input id="password" type="password" name="password" value={password} onChange={handleChange} className={'form-control' + (submitted && !password ? ' is-invalid' : '')} />
                     {submitted && !password &&
-                        <div className="invalid-feedback">Enter password*</div>
+                        <div className="invalid-feedback">Введите пароль*</div>
                     }
                 </div> <br />
                 <div className="form-group">

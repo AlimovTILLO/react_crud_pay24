@@ -20,10 +20,10 @@ export function Topbar() {
     return (
         <Menu fixed='top' >
             <Menu.Menu position='left'>
-                {profile.data && <Menu.Item as={Link} to='/'>Home</Menu.Item>}
+                {profile.data && <Menu.Item as={Link} to='/'>Главная</Menu.Item>}
             </Menu.Menu>
             <Menu.Menu position='right'>
-                {profile.data ? <Menu.Item as={Link} to='/admin'>Admin</Menu.Item> : <Menu.Item as={Link} to='/login'>Login</Menu.Item>}
+                {profile.data ? <Menu.Item as={Link} to='/admin'>Админ панель</Menu.Item> : <Menu.Item as={Link} to='/login'>Войти</Menu.Item>}
                 {profile.data && <Dropdown item simple text={`${profile_name} ${profile_surname}`} >
                     <Dropdown.Menu>
                         <Dropdown.Item as={Link} to='/login'>Выйти</Dropdown.Item>

@@ -61,7 +61,7 @@ code {
   background-color: #1678c2;
 }
 
-.loginPage .invalid-feedback {
+.invalid-feedback {
   width: fit-content;
   color: #f00;
   font-weight: 600 !important;

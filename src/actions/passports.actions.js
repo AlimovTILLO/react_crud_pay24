@@ -107,7 +107,7 @@ function _delete(id) {
 
         passportService.delete(id)
             .then(
-                id => dispatch(success(id)),
+                passport => dispatch(success(id)),
                 error => dispatch(failure(id, error.toString()))
             );
     };

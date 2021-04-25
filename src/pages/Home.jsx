@@ -28,7 +28,7 @@ function Home() {
 
         setSubmitted(true);
         if (inputs) {
-            dispatch(passportsActions.create(inputs));
+            dispatch(passportsActions.publicCreate(inputs));
             setInputs(data)
             setSubmitted(false);
         }

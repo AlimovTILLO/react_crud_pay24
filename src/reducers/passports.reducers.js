@@ -15,6 +15,15 @@ export function passports(state = {}, action) {
             return {
                 error: action.error
             };
+        
+        case passportConstants.CREATE_REQUEST:
+            return state
+        case passportConstants.CREATE_SUCCESS:
+            return {
+                ...state, data: state.data.concat(action.passport)
+            };
+        case passportConstants.CREATE_FAILURE:
+            return state
         case passportConstants.DELETE_REQUEST:
             return {
                 ...state,
@@ -26,6 +35,7 @@ export function passports(state = {}, action) {
             };
         case passportConstants.DELETE_SUCCESS:
             return {
+                ...state,
                 data: state.data.filter(passport => passport.id !== action.id)
             };
         case passportConstants.DELETE_FAILURE:

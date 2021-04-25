@@ -1,5 +1,10 @@
 import axios from 'axios';
+
 import { history } from '../helpers';
+
+axios.defaults.xsrfHeaderName = "X-CSRFToken"
+axios.defaults.xsrfCookieName = 'csrftoken'
+
 let ORIGING = "http://127.0.0.1:7000"
 
 

@@ -9,10 +9,19 @@ export function PassportsModal(props) {
     const [submitted, setSubmitted] = useState(false);
     const [inputs, setInputs] = useState({});
     const dispatch = useDispatch();
-
+    const data = {
+        firstname: '',
+        lastname: '',
+        middlename: '',
+        phone: '',
+        address: '',
+        tin: ''
+    }
     useEffect(() => {
         if (passport) {
             setInputs(passport)
+        } else {
+            setInputs(data)
         }
     }, [passport]);
 
@@ -26,8 +35,13 @@ export function PassportsModal(props) {
         setOpen(false)
         setSubmitted(true);
         if (inputs) {
-            dispatch(passportsActions.update(inputs));
-            setInputs(passport)
+            if(passport){
+                dispatch(passportsActions.update(inputs));
+                setInputs(passport)
+            } else {
+                dispatch(passportsActions.create(inputs));
+                setInputs(data)
+            }
             setSubmitted(false);
         }
     }

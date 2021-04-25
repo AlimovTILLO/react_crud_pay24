@@ -37,12 +37,7 @@ function create(passport) {
 }
 
 function publicCreate(passport) {
-  const token = getUserToken()
-  const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Token ' + token
-  };
-  return API.post(`/createpassports/`, passport, headers)
+  return API.post(`/addpassport/`, passport)
 }
 
 function update(passport) {

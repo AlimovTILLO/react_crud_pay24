@@ -88,7 +88,7 @@ export function Passports() {
             >
                 <Header icon='trash' content='Удалить' />
                 <Modal.Actions>
-                    <Button color='red' onClick={() => setDelete(false)}>
+                    <Button  onClick={() => setDelete(false)}>
                         <Icon name='remove' /> Нет </Button>
                     <Button color='green' onClick={() => deletePassport()}>
                         <Icon name='checkmark' /> Да </Button>

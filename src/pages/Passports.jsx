@@ -86,7 +86,7 @@ export function Passports() {
                 onClose={() => setDelete(false)}
                 onOpen={() => setDelete(true)}
             >
-                <Header icon='archive' content='Удалить' />
+                <Header icon='trash' content='Удалить' />
                 <Modal.Actions>
                     <Button color='red' onClick={() => setDelete(false)}>
                         <Icon name='remove' /> Нет </Button>

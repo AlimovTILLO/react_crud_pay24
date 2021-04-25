@@ -31,10 +31,10 @@ export function Passports() {
         setDelete(false)
     }
     return (
-        <Container style={{ marginTop: '50px' }}>
+        <Container>
             {passports.loading && <Loader size='large'>Загрузка...</Loader>}
             {passports.error && <span className="text-danger">Ошибка: {passports.error}</span>}
-            {passports.data && <Table color='grey' compact striped selectable unstackable>
+            {passports.data && <Table color='grey' compact striped selectable unstackable  style={{ marginTop: '50px' }}>
 
                 <Table.Header>
                     <Table.Row>

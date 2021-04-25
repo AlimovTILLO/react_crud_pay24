@@ -5,16 +5,17 @@ import { useDispatch } from 'react-redux';
 import { passportsActions } from '../actions';
 
 
-export function Home() {
+function Home() {
     const [submitted, setSubmitted] = useState(false);
-    const [inputs, setInputs] = useState({
+    const data = {
         firstname: '',
         lastname: '',
         middlename: '',
         phone: '',
         address: '',
         tin: ''
-    });
+    }
+    const [inputs, setInputs] = useState(data);
     const dispatch = useDispatch();
 
     const handleChange = (e) => {
@@ -28,6 +29,8 @@ export function Home() {
         setSubmitted(true);
         if (inputs) {
             dispatch(passportsActions.create(inputs));
+            setInputs(data)
+            setSubmitted(false);
         }
     }
 
@@ -83,3 +86,5 @@ export function Home() {
         </Form>
     </Container>
 }
+
+export { Home };

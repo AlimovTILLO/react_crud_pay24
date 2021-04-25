@@ -35,11 +35,11 @@ function logout() {
 }
 
 
-function getCurrentUser(id) {
+function getCurrentUser() {
     return dispatch => {
-        dispatch(request(id));
+        dispatch(request());
 
-        userService.getCurrentUser(id)
+        userService.getCurrentUser()
             .then(
                 user => dispatch(success(user)),
                 error => {

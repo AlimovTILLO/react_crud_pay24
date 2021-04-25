@@ -20,7 +20,7 @@ export function Topbar() {
     return (
         <Menu fixed='top' >
             <Menu.Menu position='left'>
-                {profile.data && <Menu.Item as={Link} to='/'>Главная</Menu.Item>}
+                <Menu.Item as={Link} to='/'>Главная</Menu.Item>
             </Menu.Menu>
             <Menu.Menu position='right'>
                 {profile.data ? <Menu.Item as={Link} to='/admin'>Админ панель</Menu.Item> : <Menu.Item as={Link} to='/login'>Войти</Menu.Item>}
